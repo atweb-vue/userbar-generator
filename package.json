@@ -1,0 +1,35 @@
+{
+  "name": "userbar-generator",
+  "private": false,
+  "version": "1.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/userbar-generator.umd.js",
+  "module": "./dist/userbar-generator.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/userbar-generator.es.js",
+      "require": "./dist/userbar-generator.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  },
+  "license": "MIT",
+  "author": "SlickDomique",
+  "bugs": {
+    "url": "https://github.com/SlickDomique/userbar-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlickDomique/userbar-generator.git"
+  }
+}

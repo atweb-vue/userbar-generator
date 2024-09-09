@@ -40,6 +40,7 @@ const loadFont = async () => {
 
 const imagesLoaded: { [key: string]: any } = {};
 const loadImage = async (src: string) => {
+  if (src === "") return;
   if (imagesLoaded[src]) return imagesLoaded[src];
 
   const image = new Image();
@@ -105,10 +106,10 @@ const generateUserbar = async ({
   );
 
   const generatePattern = async () => {
+    if (img === "") return;
     const patternFromImage = ctx.createPattern(img, "repeat");
     ctx.fillStyle = patternFromImage!;
     ctx.fillRect(0, 0, width, height);
-    console.log("pattern");
   };
 
   const generateBackground = () => {

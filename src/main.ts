@@ -60,3 +60,21 @@ userbar = await generateUserbar({
 image = document.createElement("img");
 image.src = userbar;
 document.getElementById("app")?.appendChild(image);
+
+userbar = await generateUserbar({
+  text: "no pattern",
+  textAlign: "left",
+  topShadow: false,
+  pattern: "none",
+  background: {
+    type: "gradient",
+    positionX: -0,
+    positionY: -50,
+    endPositionX: 400,
+    endPositionY: 50,
+    colors: ["#FF0000", "#00FF00", "#0000FF"],
+  },
+});
+image = document.createElement("img");
+image.src = userbar;
+document.getElementById("app")?.appendChild(image);

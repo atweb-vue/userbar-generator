@@ -33,7 +33,6 @@ const loadFont = async () => {
   if (fontLoaded) return;
 
   const font = new FontFace("visitor1", `url(${visitorFont})`);
-  console.log(font, visitorFont);
   await font.load();
   document.fonts.add(font);
   fontLoaded = true;
@@ -46,7 +45,6 @@ const loadImage = async (src: string) => {
   const image = new Image();
   image.src = src;
   await new Promise((resolve) => {
-    console.log("loaded");
     image.onload = resolve;
   });
   imagesLoaded[src] = image;

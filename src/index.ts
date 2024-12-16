@@ -159,7 +159,7 @@ const generateUserbar = async ({
   if (topShadow) generateTopShadow();
   generateText();
 
-  return canvas.toDataURL("image/jpeg");
+  return await new Promise<Blob | null>(resolve => canvas.toBlob(blob => resolve(blob)));
 };
 
 export default generateUserbar;
